@@ -13,3 +13,7 @@ class Notes(models.Model):
     class Meta:
         verbose_name = "notes"
         verbose_name_plural = "notes"
+
+
+class HomeWork(models.Model):
+    pass
