@@ -21,3 +21,9 @@ class HomeWorkForm(forms.ModelForm):
 
 class DashBoardForm(forms.Form):
     text = forms.CharField(max_length=100, label="Enter your search-:")
+
+
+class TodoWorkForm(forms.ModelForm):
+    class Meta:
+        model = Todo
+        fields = ['title', 'is_finished']
