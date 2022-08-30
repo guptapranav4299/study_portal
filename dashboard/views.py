@@ -1,3 +1,4 @@
+import wikipedia
 from django.contrib import messages
 from django.shortcuts import render, redirect
 from django.views.generic import DetailView
@@ -250,3 +251,23 @@ def dictionary(request):
         "form":form
     }
     return render(request, 'dashboard/dictionary.html', context)
+
+
+def wiki(request):
+    if request.method == "POST":
+        text = request.POST['text']
+        form = DashBoardForm(request.POST)
+        search = wikipedia.page(text)
+        context = {
+            'form':form,
+            'title':search.title,
+            'link': search.url,
+            'details': search.summary
+        }
+        return render(request, 'dashboard/wiki.html', context)
+    else:
+        form = DashBoardForm()
+    context = {
+        "form":form,
+    }
+    return render(request,'dashboard/wiki.html',context)
