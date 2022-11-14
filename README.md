@@ -4,6 +4,8 @@
 
 ### The portal also provides wikipedia, dictionary and book search for the students.
 
+## DEPLOYED LINK
+## [See Here](https://monkfish-app-lkkzn.ondigitalocean.app/)
 ## SCREENSHOTS 
 
 ![Index_page](/static/screenshots/index_1.png) <br/>
